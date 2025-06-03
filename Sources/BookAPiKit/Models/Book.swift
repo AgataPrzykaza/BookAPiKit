@@ -15,14 +15,16 @@ public struct Book: Identifiable, Decodable, Sendable {
     public let publishedDate: String?
     public let description: String?
     public let thumbnailURL: URL?
+    public let categories: [String]?
     
-    public init(id: String, title: String, authors: [String],publishedDate: String? = nil, description: String? = nil, thumbnailURL: URL? = nil) {
+    public init(id: String, title: String, authors: [String],publishedDate: String? = nil, description: String? = nil, thumbnailURL: URL? = nil,categories: [String]? = nil) {
         self.id = id
         self.title = title
         self.authors = authors
         self.publishedDate = publishedDate
         self.description = description
         self.thumbnailURL = thumbnailURL
+        self.categories = categories
     }
     
     

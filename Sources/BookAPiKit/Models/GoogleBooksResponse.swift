@@ -17,6 +17,7 @@ struct GoogleBooksResponse: Decodable {
         let publishedDate: String?
         let description: String?
         let imageLinks: ImageLinks?
+        let categories: [String]?
     }
 
     struct ImageLinks: Decodable {

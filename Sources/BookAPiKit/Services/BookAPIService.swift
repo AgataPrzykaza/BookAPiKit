@@ -50,7 +50,8 @@ public struct BookAPIService: BookAPIServiceProtocol {
                     authors: info.authors ?? ["Nieznany autor"],
                     publishedDate: info.publishedDate,
                     description: info.description,
-                    thumbnailURL: info.imageLinks.flatMap { URL(string: $0.thumbnail ?? "") }
+                    thumbnailURL: info.imageLinks.flatMap { URL(string: $0.thumbnail ?? "") },
+                    categories: info.categories
                 )
             } ?? []
             
